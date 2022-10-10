@@ -1,0 +1,58 @@
+//Praktikum EL2206 Pemecahan Masalah dengan C
+//Modul		: 09
+//Percobaan	: Problem 01
+//Tanggal	: 21  April 2019
+//Nama (NIM): Pahala Samosir (13117050)
+//Nama File	: Problem 01
+//Deskripsi	: Implementasi Struktur Data Linked List
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct NODE {
+   int  X;
+   struct NODE *next;
+};
+
+struct NODE *head = NULL;
+struct NODE *current = NULL;
+
+void printList(){
+   struct NODE *ptr = head;
+   printf("\n[head] =>");
+   while(ptr != NULL) {
+      printf(" %d =>",ptr->X);
+      ptr = ptr->next;
+   }
+   printf(" [null]\n");
+}
+
+void insert(int X){
+   struct NODE *link = (struct NODE*) malloc(sizeof(struct NODE));
+
+   link->X = X;
+   link->next = head;
+   head = link;
+}
+int main(){
+    char PIL;
+
+printf ("\n       PAHALA SAMOSIR       \n");
+printf ("\n          13117050          \n");
+printf ("\nPROGRAM STUDI TEKNIK ELEKTRO\n");
+printf ("\nINSTITUT TEKNOLOGI SUMATERA \n");
+printf ("\n============================\n");
+
+ while(1) {
+ printf("Input Nilai elemen : ");
+ scanf("%d",&PIL);
+ insert(PIL);
+ printf("Apakah Anda Ingin Memasukkan Nilai Elemen Lagi (y/n)? :");
+ scanf("%s", &PIL);
+
+ if (PIL=='n')
+    {
+  printList();
+  exit(0);
+    } }
+}

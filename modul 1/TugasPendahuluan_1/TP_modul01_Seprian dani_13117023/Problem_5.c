@@ -1,0 +1,23 @@
+//Praktikum Pemecahan Masalah dengan C
+//Tugas Praktikum : 1
+//Problem         : 5
+//Tanggal         : 24 Maret 2019
+//Nama (NIM)      : Seprian Dani (13117023)
+//Nama File       : Probem_5.c
+//Deskripsi       : ASCII code
+#include <stdio.h>
+int main (void)
+{
+    // Deklarasi Variabel
+    float Angka_1;
+    float Angka_2;
+    float Result;
+    // Algoritma
+    printf("Masukkan bilangan ke-1: ");
+    scanf("%f",&Angka_1);
+    printf("Masukkan bilangan ke-2: ");
+    scanf("%f",&Angka_2);
+    Result = Angka_1 + Angka_2;
+    printf("Hasil penjumlahan: %.2f\n",Result);
+    return 0;
+}
